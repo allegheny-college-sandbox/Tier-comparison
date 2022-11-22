@@ -20,7 +20,7 @@ jobs:
 
           echo 'NUM_OPEN_ISSUES='$numOpenIssues >> $GITHUB_ENV
         env:
-          GITHUB_TOKEN: ${{ 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 }}
+          GITHUB_TOKEN: ${{ }}
           OWNER: ${{ CMPSC-203-Allegheny-College-Fall-2022 }}
           REPO: ${{ Tier-comparison }}
       - run: |
