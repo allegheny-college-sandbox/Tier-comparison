@@ -1,38 +1,64 @@
-import json
+# -*- coding: utf-8 -*-
+
+# Uses Python 2.7
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 import requests
+import json
 
 # Authentication for user filing issue (must have read/write access to
 # repository to add issue to)
-USERNAME = 'EstebanMendez01'
-PASSWORD = ''
+USERNAME = os.environ['EstebanMendez01']
+TOKEN = os.environ['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']
 
 # The repository to add this issue to
 REPO_OWNER = 'CMPSC-203-Allegheny-College-Fall-2022'
 REPO_NAME = 'Tier-comparison'
 
-def make_github_issue(title, body=None, assignee=None, milestone=None, labels=None):
-    '''Create an issue on github.com using the given parameters.'''
-    # Our url to create issues via POST
-    url = 'https://api.github.com/repos/%s/%s/issues' % (REPO_OWNER, REPO_NAME)
-    print(url)
-    # Create an authenticated session to create the issue
-    auth = requests.auth.HTTPDigestAuth(USERNAME, PASSWORD)
-    #session = requests.session(auth=(USERNAME, PASSWORD))
-    session = requests.session()
-    session.auth = auth
+def make_github_issue(title, body=None, created_at=None, closed_at=None, updated_at=None, assignee=None, milestone=None, closed=None, labels=None):
+    # Create an issue on github.com using the given parameters
+    # Url to create issues via POST
+    url = 'https://api.github.com/repos/%s/%s/import/issues' % (REPO_OWNER, REPO_NAME)
+
+    # Headers
+    headers = {
+        "Authorization": "token %s" % TOKEN,
+        "Accept": "application/vnd.github.golden-comet-preview+json"
+    }
 
     # Create our issue
-    issue = {'title': title,
-             'body': body,
-             'assignee': assignee,
-             'milestone': milestone,
-             'labels': labels}
-    # Add the issue to our repository
-    r = session.post(url, json.dumps(issue))
-    if r.status_code == 201:
-        print('Successfully created Issue "%s"' % title)
-    else:
-        print('Could not create Issue "%s"' % title)
-        print('Response:', r.content)
+    data = {'issue': {'title': title,
+                      'body': body,
+                      'created_at': created_at,
+                      'closed_at': closed_at,
+                      'updated_at': updated_at,
+                      'assignee': assignee,
+                      'milestone': milestone,
+                      'closed': closed,
+                      'labels': labels}}
 
-make_github_issue('TEST', 'This is a test', 'EstebanMendez01', 1, ['bug'])
+    payload = json.dumps(data)
+
+    # Add the issue to our repository
+    response = requests.request("POST", url, data=payload, headers=headers)
+    if response.status_code == 202:
+        print('Successfully created Issue "%s"') % title
+    else:
+        print ('Could not create Issue "%s"') % title
+        print ('Response:', response.content)
+
+title = 'Pretty title'
+body = 'Beautiful body'
+created_at = "2014-01-01T12:34:58Z"
+closed_at = "2014-01-02T12:24:56Z"
+updated_at = "2014-01-03T11:34:53Z"
+assignee = 'username'
+milestone = 1
+closed = False
+labels = [
+    "bug", "low", "energy"
+]
+
+make_github_issue(title, body, created_at, closed_at, updated_at, assignee, milestone, closed, labels)

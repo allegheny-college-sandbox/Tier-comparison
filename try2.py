@@ -17,7 +17,7 @@ data = {
 username = "tmiller-10"
 
 Reponame = "Temperature-Conversion1"
-url = "https://api.github.com/repos/{}/{}/issues".format(username, Reponame)
+url = "https://api.github.com/repos/tmiller-10/Temperature-Conversion1/issues"
 
 
 print(url)
