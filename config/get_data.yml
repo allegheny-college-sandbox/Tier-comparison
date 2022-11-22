@@ -1,0 +1,27 @@
+TODO: add and cite API References
+
+source_id: my_sheet_id
+sheets:
+  - name: sheet1
+    regions:
+    - name: grades
+      start: A1
+      end: L4
+      contains_headers: true
+    - name: expenses
+      start: F5
+      end: K12
+      contains_headers: false
+      headers:
+          - Jan
+          - Feb
+          - Mar
+          - Apr
+          - May
+          - Jun
+  - name: sheet2
+    regions:
+    - name: some_data
+      start: A1
+      end: Z10
+      contains_headers: true
