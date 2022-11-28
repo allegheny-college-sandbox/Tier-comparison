@@ -6,8 +6,8 @@
   title: Green Tier
   body: This is the green tier. You are doing great!
   labels:
-    - label1
-    - label2
+    - SheetShuttle
+    - Automated
 
 # Create an issue
 # labels are optional
@@ -17,8 +17,8 @@
   title: Yellow Tier
   body: This is the yellow tier. You are doing some good things, but need to get to green tier.
   labels:
-    - label1
-    - label2
+    - SheetShuttle
+    - Automated
 
 # Create an issue
 # labels are optional
@@ -28,8 +28,8 @@
   title: Red Tier
   body: This is the red tier. You need to keep it up.
   labels:
-    - label1
-    - label2
+    - SheetShuttle
+    - Automated
 
 # Create an issue
 # labels are optional
@@ -39,5 +39,5 @@
   title: some new issue
   body: test body
   labels:
-    - label1
-    - label2
+    - SheetShuttle
+    - Automated
