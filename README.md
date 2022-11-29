@@ -5,7 +5,7 @@ This project consists on an enhancement for SheetsShuttle and Gatorgrade.
 
 ## Description of the project:
 
-Project in which it consists in implementing a connection between gatorgrade and students reports. This would make the life of Professors easier by looking over the issues that the projects that the students have done. As a whole, the program need to create issues when the students submit their assignment and run github actions, creating a report for Professors to view.
+In this project, We are creating different tiers for different grades within sheetshuttle. We will create various code segments within the sheetshuttle program to determine what tiers those students are recieving. This will also determine what the student(s) will need to work to improve for their next projects and for there future development withing computer science.
 
 - Gatorgrade report with X, add it as an issue.
 - Easier for Professors
