@@ -1,4 +1,4 @@
-# Gatorgrade-Issues-Creation
+# Gatorgrade-Issues-Tier-Comparison.
 Project 2 CMPSC 203
 
 This project consists on an enhancement for SheetsShuttle and Gatorgrade. 
