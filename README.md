@@ -9,3 +9,5 @@ In this project, We are creating different tiers for different grades within she
 
 - Easier for Professors
 - Checkout GitHub API
+
+[Website Documentation](https://tier-comparison.netlify.app/)
