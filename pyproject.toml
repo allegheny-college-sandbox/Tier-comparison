@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "tier-comparison-tests"
+version = "0.1.0"
+description = ""
+authors = ["Esteban Mendez <mendez01@allegheny.edu>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.10.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+# Define a test task to run tests with statement and branch coverages and missing line numbers
+test = "poetry run pytest --cov=area --cov-branch --cov-report=term-missing test/"

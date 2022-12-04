@@ -25,22 +25,36 @@ red = cellFormat(backgroundColor=color(255, 0, 0))
 
 # What type of data is this? sheet.range(grades), it's probably an iterable.
 # What type of data is cell?
-# If it's an object, what do you need to call toget the value
-for cell in sheet.range(grades):
-    if 100 > int(cell.value) and int(cell.value) > 90:
-        print("green")
-        (workbook,[(cell, green)])
-        print(cell.value)
-        print("-----------------")
-    elif 60 > int(cell.value) and int(cell.value) > 0:
-        print("red")
-        (workbook,[(cell, red)])
-        print(cell.value)
-        print("-----------------")
-    elif 90 > int(cell.value) and int(cell.value) > 70:
-        print("yellow")
-        (workbook,[(cell, yellow)])
-        print(cell.value)
-        print("-----------------")
-    else:
-        pass
+# If it's an object, what do you need to call to get the value
+
+def greentier():
+    for cell in sheet.range(grades):
+        if 100 > int(cell.value) and int(cell.value) > 90:
+            print("green")
+            (workbook,[(cell, green)])
+            print(cell.value)
+            print("-----------------")
+        else:
+            pass
+
+def yellowtier():
+    for cell in sheet.range(grades):
+        if 90 > int(cell.value) and int(cell.value) > 70:
+            print("yellow")
+            (workbook,[(cell, yellow)])
+            print(cell.value)
+            print("-----------------")
+        else:
+            pass
+
+def redtier():
+    for cell in sheet.range(grades):
+        if 60 > int(cell.value) and int(cell.value) > 0:
+            print("red")
+            (workbook,[(cell, red)])
+            print(cell.value)
+            print("-----------------")
+        else:
+            pass
+
+
