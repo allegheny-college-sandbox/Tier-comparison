@@ -19,9 +19,9 @@ grades = 'C2:C5'
 # Separate the grades in tiers by comparing with numbers
 
 # colors:
-green = cellFormat(backgroundColor=color(0, 255, 0))
-yellow = cellFormat(backgroundColor=color(255, 255, 0))
-red = cellFormat(backgroundColor=color(255, 0, 0))
+green = cellFormat(backgroundColor=color(0, 1, 0))
+yellow = cellFormat(backgroundColor=color(1, 1, 0))
+red = cellFormat(backgroundColor=color(1, 0, 0))
 
 # What type of data is this? sheet.range(grades), it's probably an iterable.
 # What type of data is cell?
@@ -58,3 +58,7 @@ def redtier():
             pass
 
 
+if __name__ == "__main__":
+    greentier()
+    yellowtier()
+    redtier()
