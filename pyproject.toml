@@ -19,4 +19,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
 # Define a test task to run tests with statement and branch coverages and missing line numbers
-test = "poetry run pytest --cov=area --cov-branch --cov-report=term-missing test/"
+test = "poetry run pytest --cov=tier --cov-branch --cov-report=term-missing test/"
