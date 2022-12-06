@@ -1,4 +1,7 @@
 # Tier-Comparison.
+
+![Logo](/config/logo_tier.png "Tier-comparison")
+
 Project 2 CMPSC 203
 
 This project consists on an enhancement for SheetsShuttle and Gatorgrade. 
