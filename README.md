@@ -1,6 +1,7 @@
 # Tier-Comparison.
 
 ![Logo](/config/logo_tier.png "Tier-comparison")
+![](../../workflows/build/badge.svg)![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 Project 2 CMPSC 203
 
