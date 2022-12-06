@@ -2,7 +2,12 @@
 
 ![Logo](/config/logo_tier.png "Tier-comparison")
 
-![Github](https://github.com/github/docs/actions/workflows/main.yml/badge.svg) ![License](https://img.shields.io/badge/license-MIT-blue?style=flat) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Actions Status](https://github.com/noorbuchi/SheetShuttle/workflows/Lint%20and%20Test/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat) 
+![BuiltWith](https://img.shields.io/badge/Built%20With-Python-blue?style=flat&logo=python&logoColor=yellow)
+[![codecov](https://codecov.io/gh/noorbuchi/SheetShuttle/branch/main/graph/badge.svg?token=02353FAN4W)](https://codecov.io/gh/noorbuchi/SheetShuttle)
+![stars](https://img.shields.io/github/stars/noorbuchi/SheetShuttle.svg)
+
 
 Project 2 CMPSC 203
 
