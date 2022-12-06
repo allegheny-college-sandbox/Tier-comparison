@@ -2,7 +2,7 @@
 
 ![Logo](/config/logo_tier.png "Tier-comparison")
 
-![Github](https://github.com/github/docs/actions/workflows/main.yml/badge.svg) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Github](https://github.com/github/docs/actions/workflows/main.yml/badge.svg) ![License](https://img.shields.io/badge/license-MIT-blue?style=flat) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 Project 2 CMPSC 203
 
