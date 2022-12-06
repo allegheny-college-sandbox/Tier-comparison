@@ -5,7 +5,6 @@
 ![Actions Status](https://github.com/noorbuchi/SheetShuttle/workflows/Lint%20and%20Test/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat) 
 ![BuiltWith](https://img.shields.io/badge/Built%20With-Python-blue?style=flat&logo=python&logoColor=yellow)
-[![codecov](https://codecov.io/gh/noorbuchi/SheetShuttle/branch/main/graph/badge.svg?token=02353FAN4W)](https://codecov.io/gh/noorbuchi/SheetShuttle)
 ![stars](https://img.shields.io/github/stars/noorbuchi/SheetShuttle.svg)
 
 
