@@ -1,0 +1,43 @@
+# Create an issue
+# labels are optional
+- type: issue
+  action: create
+  repo: CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison
+  title: Green Tier
+  body: This is the green tier. You are doing great!
+  labels:
+    - SheetShuttle
+    - Automated
+
+# Create an issue
+# labels are optional
+- type: issue
+  action: create
+  repo: CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison
+  title: Yellow Tier
+  body: This is the yellow tier. You are doing some good things, but need to get to green tier.
+  labels:
+    - SheetShuttle
+    - Automated
+
+# Create an issue
+# labels are optional
+- type: issue
+  action: create
+  repo: CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison
+  title: Red Tier
+  body: This is the red tier. You need to keep it up.
+  labels:
+    - SheetShuttle
+    - Automated
+
+# Create an issue
+# labels are optional
+- type: issue
+  action: create
+  repo: CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison
+  title: some new issue
+  body: test body
+  labels:
+    - SheetShuttle
+    - Automated
