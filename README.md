@@ -7,6 +7,8 @@
 
 ![Logo](/config/logo_tier.png "Tier-comparison")
 
+![GitHub](https://img.shields.io/github/license/danniyb/Tier-comparison)
+
 Project 2 CMPSC 203
 
 This project consists on an enhancement for SheetsShuttle and Gatorgrade. 
