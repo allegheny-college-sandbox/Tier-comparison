@@ -7,7 +7,7 @@
 
 ![Logo](/config/logo_tier.png "Tier-comparison")
 
-![GitHub](https://img.shields.io/github/license/danniyb/Tier-comparison)
+//![GitHub](https://img.shields.io/github/license/danniyb/Tier-comparison)
 
 Project 2 CMPSC 203
 
