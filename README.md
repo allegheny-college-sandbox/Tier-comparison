@@ -1,6 +1,6 @@
 # Tier-Comparison.
 
-![checks](https://img.shields.io/github/checks-status/CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison/014dfbc1be908f63f862f039d267813b2734d187)
+[![Manual workflow](https://github.com/allegheny-college-sandbox/Tier-comparison/actions/workflows/manual.yml/badge.svg)](https://github.com/allegheny-college-sandbox/Tier-comparison/actions/workflows/manual.yml)
 ![Commit](https://img.shields.io/github/commit-activity/w/CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison)
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat) 
 ![BuiltWith](https://img.shields.io/badge/Built%20With-Python-blue?style=flat&logo=python&logoColor=yellow)
