@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: actions/allegheny-college-sandbox/Tier-comparison@v1
+        uses: actions/hello-world-composite-action@v1
         with:
           who-to-greet: 'Esteban and Tyler'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
