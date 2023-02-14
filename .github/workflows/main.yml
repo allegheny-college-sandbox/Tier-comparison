@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: ./actions/checkout/action.yml
+      - uses: ./actions/checkout
       - id: foo
-        uses: ./actions/hello-world-composite-action/action.yml
+        uses: ./actions/hello-world-composite-action
         with:
           who-to-greet: 'Esteban and Tyler'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
