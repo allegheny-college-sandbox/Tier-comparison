@@ -1,4 +1,4 @@
-"\n# Create an issue\n# labels are optional\n- type: issue\n  action: create\n  repo:\
-  \ CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison\n  title: Green Tier\n \
-  \ body: This is the green tier. You are doing great!\n  labels:\n    - SheetShuttle\n\
-  \    - Automated\n"
+'<br># Create an issue<br># labels are optional<br>- type: issue<br>  action: create<br>  repo:
+  CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison<br>  title: Green Tier<br>  body:
+  This is the green tier. You are doing great!<br>  labels:<br>    - SheetShuttle<br>    -
+  Automated<br>'
