@@ -1,5 +1,13 @@
+import ruamel.yaml
 import pystache
+import argparse
 
+# Define command line argument parser
+parser = argparse.ArgumentParser(description='Create GitHub issues for different tiers.')
+parser.add_argument('tier', type=str, choices=['green', 'yellow', 'red'], help='The tier to create the issue for.')
+args = parser.parse_args()
+
+# Define the YAML template
 template = """
 # Create an issue
 # labels are optional
@@ -7,23 +15,56 @@ template = """
   action: create
   repo: {{ repoName }}
   title: {{ issueTitle }}
-  body: {{ issueBody }}
+  body: "{{ issueBody }}"
   labels:
     {{#labels}}
     - {{.}}
     {{/labels}}
 """
 
-data = {
-    "repoName": "CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison",
-    "issueTitle": "Green Tier",
-    "issueBody": "This is the green tier. You are doing great!",
-    "labels": [
-        "SheetShuttle",
-        "Automated"
-    ]
-}
+# Load the data for the specified tier
+if args.tier == 'green':
+    data = {
+        "repoName": "CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison",
+        "issueTitle": "Green Tier",
+        "issueBody": open("../templates/green_tier.md").read(),
+        "labels": [
+            "SheetShuttle",
+            "Automated"
+        ]
+    }
+elif args.tier == 'yellow':
+    data = {
+        "repoName": "CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison",
+        "issueTitle": "Yellow Tier",
+        "issueBody": open("../templates/yellow_tier.md").read(),
+        "labels": [
+            "SheetShuttle",
+            "Automated"
+        ]
+    }
+else:
+    data = {
+        "repoName": "CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison",
+        "issueTitle": "Red Tier",
+        "issueBody": open("../templates/red_tier.md").read(),
+        "labels": [
+            "SheetShuttle",
+            "Automated"
+        ]
+    }
 
+# Render the template with the specified data
 renderer = pystache.Renderer()
-rendered = renderer.render(template, data)
-print(rendered)
+message = renderer.render(template, data)
+
+# Set up the YAML dumper
+yaml = ruamel.yaml.YAML()
+yaml.indent(mapping=2, sequence=4, offset=2)
+yaml.preserve_quotes = True
+yaml.explicit_start = True
+yaml.explicit_end = True
+
+# Dump the YAML to a file
+with open('../config/actually_running/create_issues.yml', 'w') as file:
+    yaml.dump(yaml.load(message), file)

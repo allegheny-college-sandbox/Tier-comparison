@@ -1,4 +1,18 @@
-'<br># Create an issue<br># labels are optional<br>- type: issue<br>  action: create<br>  repo:
-  CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison<br>  title: Green Tier<br>  body:
-  This is the green tier. You are doing great!<br>  labels:<br>    - SheetShuttle<br>    -
-  Automated<br>'
+---
+# Create an issue
+# labels are optional
+  - type: issue
+    action: create
+    repo: CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison
+    title: Red Tier
+    body: "## Red Tier\nWe noticed that you are struggling in the course. We want\
+      \ to help you get back on track and reach your full potential.\nHere are some\
+      \ steps you can take to improve:\n- Attend all lectures and recitations - Meet\
+      \ with your instructor or TA for additional help - Spend more time reviewing\
+      \ the course material - Complete practice problems and seek feedback - Submit\
+      \ assignments on time\nWe are here to support you and help you succeed. Don&#x27;t\
+      \ hesitate to reach out if you need assistance.\n"
+    labels:
+      - SheetShuttle
+      - Automated
+...
