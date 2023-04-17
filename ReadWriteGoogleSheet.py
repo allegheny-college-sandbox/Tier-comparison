@@ -9,10 +9,10 @@ scopes = [
     'https://www.googleapis.com/auth/drive'
 ]
 
-creds = ServiceAccountCredentials.from_json_keyfile_name(os.getcwd()+'/secret_key/key.json', scopes=scopes)
+creds = ServiceAccountCredentials.from_json_keyfile_name('C:/Users/Tikis/Desktop/Sheet_key.json', scopes=scopes)
 
 file = gspread.authorize(creds)
-workbook = file.open("Tier-comparison")
+workbook = file.open("Test_grades")
 sheet = workbook.sheet1
 grades = 'C2:C5'
 
