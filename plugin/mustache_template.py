@@ -25,7 +25,7 @@ template = """
 # Load the data for the specified tier
 if args.tier == 'green':
     data = {
-        "repoName": "CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison",
+        "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Green Tier",
         "issueBody": open("../templates/green_tier.md").read(),
         "labels": [
@@ -35,7 +35,7 @@ if args.tier == 'green':
     }
 elif args.tier == 'yellow':
     data = {
-        "repoName": "CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison",
+        "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Yellow Tier",
         "issueBody": open("../templates/yellow_tier.md").read(),
         "labels": [
@@ -45,7 +45,7 @@ elif args.tier == 'yellow':
     }
 else:
     data = {
-        "repoName": "CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison",
+        "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Red Tier",
         "issueBody": open("../templates/red_tier.md").read(),
         "labels": [

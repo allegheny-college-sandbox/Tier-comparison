@@ -3,15 +3,15 @@
 # labels are optional
   - type: issue
     action: create
-    repo: CMPSC-203-Allegheny-College-Fall-2022/Tier-comparison
-    title: Red Tier
-    body: "## Red Tier\nWe noticed that you are struggling in the course. We want\
-      \ to help you get back on track and reach your full potential.\nHere are some\
-      \ steps you can take to improve:\n- Attend all lectures and recitations - Meet\
-      \ with your instructor or TA for additional help - Spend more time reviewing\
-      \ the course material - Complete practice problems and seek feedback - Submit\
-      \ assignments on time\nWe are here to support you and help you succeed. Don&#x27;t\
-      \ hesitate to reach out if you need assistance.\n"
+    repo: allegheny-college-sandbox/Tier-tester
+    title: Green Tier
+    body: "## Green Tier\nCongratulations, you are in the Green Tier! You are doing\
+      \ great and keeping up with the course material. Keep up the good work!\n###\
+      \ What&#x27;s Working Well?\n- List the things you are doing well in the course\n\
+      ### What Could Be Improved?\n- List the areas where you think you could improve\
+      \ or need more practice\n### Action Plan\n- Create an action plan to address\
+      \ the areas that need improvement - Schedule time to work on your action plan\
+      \ and monitor your progress "
     labels:
       - SheetShuttle
       - Automated

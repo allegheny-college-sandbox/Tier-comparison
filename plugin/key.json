@@ -1,3 +1,1 @@
-{
-	"gh_access_token":"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"
-}
+${{ secrets.SHEET }}
