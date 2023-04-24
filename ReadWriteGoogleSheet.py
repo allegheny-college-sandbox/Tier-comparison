@@ -9,7 +9,7 @@ scopes = [
     'https://www.googleapis.com/auth/drive'
 ]
 
-creds = ServiceAccountCredentials.from_json_keyfile_name('C:/Users/Tikis/Desktop/Sheet_key.json', scopes=scopes)
+creds = ServiceAccountCredentials.from_json_keyfile_name({secret.SHEET}, scopes=scopes)
 
 file = gspread.authorize(creds)
 workbook = file.open("Test_grades")
