@@ -5,5 +5,5 @@ runs:
   steps:
     - run: python ReadWriteGoogleSheet.py
       shell: bash
-    - run: plugins/github_issues.py
+    - run: python plugins/github_issues.py
       shell: bash
