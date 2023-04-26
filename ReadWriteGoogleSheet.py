@@ -1,6 +1,7 @@
 # Imports needed
 import gspread
 import os
+import json
 from oauth2client.service_account import ServiceAccountCredentials
 from gspread_formatting import *
 
@@ -10,7 +11,8 @@ scopes = [
 ]
 
 #creds = ServiceAccountCredentials.from_json_keyfile_name(os.getenv("GOOGLE_SHEET_KEY"), scopes=scopes)
-creds = ServiceAccountCredentials.from_service_account_info(os.getenv("GOOGLE_SHEET_KEY"))
+json_creds = json.loads(os.getenv("GOOGLE_SHEET_KEY"))
+creds = ServiceAccountCredentials(**json_creds)
 
 file = gspread.authorize(creds)
 workbook = file.open("Test_grades")
