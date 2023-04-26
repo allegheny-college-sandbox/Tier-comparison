@@ -11,7 +11,7 @@ scopes = [
 ]
 
 #creds = ServiceAccountCredentials.from_json_keyfile_name(os.getenv("GOOGLE_SHEET_KEY"), scopes=scopes)
-json_creds = json.loads(os.getenv("GOOGLE_SHEET_KEY")
+json_creds = json.loads(os.getenv("GOOGLE_SHEET_KEY"))
 creds = ServiceAccountCredentials.from_json_keyfile_dict(json_creds)
 
 file = gspread.authorize(creds)
