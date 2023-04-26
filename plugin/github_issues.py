@@ -6,7 +6,7 @@ creds = {
     "gh_access_token": os.getenv("ISSUES")
 }
 
-with open(".creds.json") as fh:
+with open(".creds.json","w") as fh:
     json.dump(creds, fh)
 
 my_manager = github_interaction.GithubManager(".creds.json")
