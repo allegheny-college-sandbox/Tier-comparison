@@ -14,4 +14,4 @@ runs:
     run: python ${{github.action_path}}/ReadWriteGoogleSheet.py
   - name: File issue(s)
     shell: bash
-    run: python ${{github.action_path}}/plugin/github_issues.py
+    run: python ${{github.action_path}}/plugin/github_issues.py --tier red
