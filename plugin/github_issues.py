@@ -1,7 +1,7 @@
 from sheetshuttle import github_interaction
 import os
 
-my_manager = github_interaction.GithubManager(os.getenv(ISSUES))
+my_manager = github_interaction.GithubManager(os.getenv("ISSUES"))
 # key_file="plugin/key.json", sources_dir="config/actually_running"
 my_manager.collect_config()
 print("collected config")
