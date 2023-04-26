@@ -3,9 +3,13 @@ description: 'Run Tier Comparison SheetShuttle plugin'
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
-    - run: python ReadWriteGoogleSheet.py
-      shell: bash
-    - run: python plugins/github_issues.py
-      shell: bash
+  - uses: actions/checkout@v3
+  - uses: actions/setup-python@v4
+    with:
+      python-version: '3.9'
+  - name: Connect to Sheet
+    shell: bash
+    run: python ReadWriteGoogleSheet.py
+  - name: File issue(s)
+    shell: bash
+    run: python plugins/github_issues.py
