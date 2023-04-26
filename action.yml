@@ -12,6 +12,9 @@ runs:
   - name: Connect to Sheet
     shell: bash
     run: python ${{github.action_path}}/ReadWriteGoogleSheet.py
+  - name: Generate issues
+    shell: bash
+    run python ${{github.action_path}}/plugin/mustache_template.py --tier red
   - name: File issue(s)
     shell: bash
-    run: python ${{github.action_path}}/plugin/github_issues.py --tier red
+    run: python ${{github.action_path}}/plugin/github_issues.py
