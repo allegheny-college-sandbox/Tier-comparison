@@ -48,7 +48,7 @@ else:
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Red Tier",
-        "issueBody": open(os.path.abspath("/templates/red_tier.md")).read(),
+        "issueBody": open("Tier-comparison\templates\red_tier.md").read(),
         "labels": [
             "SheetShuttle",
             "Automated"
