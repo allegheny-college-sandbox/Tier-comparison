@@ -1,6 +1,7 @@
 from sheetshuttle import github_interaction
 import json
 import os
+from pathlib import Path
 
 creds = {
     "gh_access_token": os.getenv("ISSUES")
@@ -9,7 +10,10 @@ creds = {
 with open(".creds.json","w") as fh:
     json.dump(creds, fh)
 
-my_manager = github_interaction.GithubManager(".creds.json")
+path = str(Path(os.path.abspath(__file__)).parents[1])
+print(path)
+
+my_manager = github_interaction.GithubManager(".creds.json", sources_dir= path + "/config/actually_running")
 os.unlink(".creds.json")
 # key_file="plugin/key.json", sources_dir="config/actually_running"
 my_manager.collect_config()
