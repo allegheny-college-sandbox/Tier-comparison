@@ -32,7 +32,7 @@ if args.tier == 'green':
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Green Tier",
-        "issueBody": open(path).read(),
+        "issueBody": open(path + "/templates/green_tier.md").read(),
         "labels": [
             "SheetShuttle",
             "Automated"
@@ -42,7 +42,7 @@ elif args.tier == 'yellow':
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Yellow Tier",
-        "issueBody": open(os.path.abspath("/templates/yellow_tier.md")).read(),
+        "issueBody": open(path + "/templates/yellow_tier.md").read(),
         "labels": [
             "SheetShuttle",
             "Automated"
@@ -52,7 +52,7 @@ else:
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Red Tier",
-        "issueBody": open(path).read(),
+        "issueBody": open(path + "/templates/red_tier.md").read(),
         "labels": [
             "SheetShuttle",
             "Automated"
@@ -71,5 +71,5 @@ yaml.explicit_start = True
 yaml.explicit_end = True
 
 # Dump the YAML to a file
-with open('../config/actually_running/create_issues.yml', 'w') as file:
+with open(path +'/config/actually_running/create_issues.yml', 'w') as file:
     yaml.dump(yaml.load(message), file)
