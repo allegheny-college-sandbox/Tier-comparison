@@ -27,7 +27,7 @@ if args.tier == 'green':
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Green Tier",
-        "issueBody": open("./templates/green_tier.md").read(),
+        "issueBody": open(os.path.abspath("/templates/green_tier.md")).read(),
         "labels": [
             "SheetShuttle",
             "Automated"
@@ -37,7 +37,7 @@ elif args.tier == 'yellow':
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Yellow Tier",
-        "issueBody": open("./templates/yellow_tier.md").read(),
+        "issueBody": open(os.path.abspath("/templates/yellow_tier.md")).read(),
         "labels": [
             "SheetShuttle",
             "Automated"
@@ -47,7 +47,7 @@ else:
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Red Tier",
-        "issueBody": open("./templates/red_tier.md").read(),
+        "issueBody": open(os.path.abspath("/templates/red_tier.md")).read(),
         "labels": [
             "SheetShuttle",
             "Automated"
