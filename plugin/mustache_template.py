@@ -1,6 +1,7 @@
 import ruamel.yaml
 import pystache
 import argparse
+import os
 
 # Define command line argument parser
 parser = argparse.ArgumentParser(description='Create GitHub issues for different tiers.')
