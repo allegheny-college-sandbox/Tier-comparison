@@ -7,7 +7,7 @@ import os
 parser = argparse.ArgumentParser(description='Create GitHub issues for different tiers.')
 parser.add_argument('tier', type=str, choices=['green', 'yellow', 'red'], help='The tier to create the issue for.')
 args = parser.parse_args()
-
+print(os.getcwd())
 # Define the YAML template
 template = """
 # Create an issue
@@ -48,7 +48,7 @@ else:
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Red Tier",
-        "issueBody": "hello",
+        "issueBody": open(os.path.abspath("/templates/red_tier.md")).read(),
         "labels": [
             "SheetShuttle",
             "Automated"
