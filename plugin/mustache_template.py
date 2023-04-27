@@ -7,7 +7,7 @@ import os
 parser = argparse.ArgumentParser(description='Create GitHub issues for different tiers.')
 parser.add_argument('tier', type=str, choices=['green', 'yellow', 'red'], help='The tier to create the issue for.')
 args = parser.parse_args()
-print(os.getcwd())
+print(__file__)
 # Define the YAML template
 template = """
 # Create an issue
