@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(description='Create GitHub issues for different
 parser.add_argument('tier', type=str, choices=['green', 'yellow', 'red'], help='The tier to create the issue for.')
 args = parser.parse_args()
 
-path = Path(os.path.abspath(__file__)).parents[1]
+path = str(Path(os.path.abspath(__file__)).parents[1])
 print(path)
 
 # Define the YAML template
