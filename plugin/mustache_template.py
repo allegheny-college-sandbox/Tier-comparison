@@ -48,7 +48,7 @@ else:
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Red Tier",
-        "issueBody": open("Tier-comparison\templates\red_tier.md").read(),
+        "issueBody": "hello",
         "labels": [
             "SheetShuttle",
             "Automated"
