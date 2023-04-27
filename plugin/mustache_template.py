@@ -2,12 +2,16 @@ import ruamel.yaml
 import pystache
 import argparse
 import os
+from pathlib import Path
 
 # Define command line argument parser
 parser = argparse.ArgumentParser(description='Create GitHub issues for different tiers.')
 parser.add_argument('tier', type=str, choices=['green', 'yellow', 'red'], help='The tier to create the issue for.')
 args = parser.parse_args()
-print(__file__)
+
+path = Path(os.path.abspath(__file__)).parents[1]
+print(path)
+
 # Define the YAML template
 template = """
 # Create an issue
@@ -28,7 +32,7 @@ if args.tier == 'green':
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Green Tier",
-        "issueBody": open(os.path.abspath("/templates/green_tier.md")).read(),
+        "issueBody": open(path).read(),
         "labels": [
             "SheetShuttle",
             "Automated"
@@ -48,7 +52,7 @@ else:
     data = {
         "repoName": "allegheny-college-sandbox/Tier-tester",
         "issueTitle": "Red Tier",
-        "issueBody": open(os.path.abspath("/templates/red_tier.md")).read(),
+        "issueBody": open(path).read(),
         "labels": [
             "SheetShuttle",
             "Automated"
